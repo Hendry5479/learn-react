@@ -39,5 +39,5 @@ webpack 处理应用程序时会递归构建一个依赖关系图(dependency gra
 这些模块会被打包成bundle；
 React脚手架将webpack的配置隐藏起来（Vue CLI3开始也进行隐藏）
 热更新只支持源代码，配置信息修改之后需要重新跑
-**webpack配置**：yarn eject显示webpack配置，不可逆操作
+**显示webpack配置**：yarn eject显示webpack配置，不可逆操作
 
