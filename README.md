@@ -1,2 +1,4 @@
 # learn-react
-write some notes  about learning of react
+## 前言
+十分感谢王红元老师的课程，从他的讲课中学习到了许多有用的知识，对自己学习编程帮助非常大
+此仓库用于整理一下之前在学习React的过程中记录的笔记
