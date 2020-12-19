@@ -117,9 +117,9 @@ class App extends React.Component {
 } 
 ```
 
-### 2.与运算符&&
+### 2.与运算符&& （）
 `{this.state.isLogin && <h2>{this.state.username}</h2>}`
-
+三元表达式尽量避免使用
 ## 列表渲染
 在React中，展示列表使用最多的方式是map()
 `arr.map(function callback(currentValue[, index[, array]])`
@@ -136,8 +136,12 @@ jsx通过babel进行转换
 ## 虚拟DOM
 ReactElement对象的作用：React利用ReactElement对象组成了一个JavaScript的对象树，即虚拟DOM（Virtual DOM）
 **虚拟DOM的意义**
-1.很难跟踪状态改变：原有开发模式很难跟踪到状态改变，不方便调试
-2.操作真实DOM性能低：document.createElement创建的对象很复杂，并且会引起回流和重绘
+1.原始操作DOM，状态难以跟踪(debug调试，console.log)，虚拟DOM容易跟踪
+2.频繁操作真实DOM，影响性能，因为真实DOM具有复杂属性；容易引起浏览器的回流和重绘
 
-虚拟DOM实现从命令式编程转到了声明式编程(只需要关注state，React确保state和DOM匹配)
-虚拟DOM =(Reconciliation)=> 真实DOM
+虚拟DOM实现从**命令式编程**转到了**声明式编程**(只需要关注state，React确保state和DOM匹配)
+![](2020-12-19-11-23-59.png)
+
+**React渲染流程**：
+JSX => (createElement) => Virtual DOM  => (render) =>  Real DOM
+通过render()将Virtual和Real DOM同步的过程叫做**Reconciliation**
